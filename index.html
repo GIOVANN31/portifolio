@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="porti.css">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Giovanne</h1>
+        <p>Desenvolvedor Web</p>
+    </header>
+    <section id="sobre-mim">
+        <h2>Sobre Mim</h2>
+        <p>Sou especialista em criar sites e aplicativos web responsivos. Meu trabalho inclui projetos em HTML, CSS,
+            JavaScript. Estou sempre aprendendo e me atualizando. Acredito que a
+            curiosidade e a busca constante por conhecimento são essenciais para o sucesso.</p>
+    </section>
+    <section id="projetos">
+            <h2>Projetos</h2>
+            <ul>
+                <li>
+                    <h3>Forca</h3>
+                    <a href="./forca/forca.html">Projeto</a>
+                </li>
+                <li>
+                    <h3>Balança IMC</h3>
+                    <a href="./imc/imc.html">Projeto</a>
+                </li>
+                <li>
+                    <h3>Calculadora imposto</h3>
+                    <a href="./imposto/imposto.html">Projeto</a>
+                </li>
+                <li>
+                    <h3>Loja</h3>
+                    <a href="./Loja/loja.html">Projeto</a>
+                </li>
+        </ul>
+    </section>
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <!-- Adicione mais habilidades aqui -->
+        </ul>
+    </section>
+    <footer>
+        <p>Entre em contato: giovannemello1@gmail.com</p>
+        <button id="fadeButton">Apagar</button>
+
+  <script>
+    const fadeButton = document.getElementById('fadeButton');
+
+    fadeButton.addEventListener('click', fadeOutContent);
+
+    function fadeOutContent() {
+      const allElements = document.body.querySelectorAll('*');
+
+      for (const element of allElements) {
+        element.style.transition = 'opacity 3s ease';
+        element.style.opacity = 0;
+      }
+    }
+  </script>
+        <!-- Adicione links para redes sociais aqui -->
+    </footer>
+</body>
+
+</html>

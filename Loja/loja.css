@@ -1,0 +1,17 @@
+/* Estilos opcionais para os produtos */
+.produto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.produto img {
+    max-width: 125px;
+    max-height:125px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <h1>Jogo da Forca</h1>
+    <p>Escolha uma palavra secreta e tente adivinhar as letras!</p>
+    <div id="palavra"></div>
+    <input type="text" id="letra" placeholder="Digite uma letra">
+    <button onclick="verificarLetra()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        const palavras = ["banana", "abacaxi", "laranja", "morango", "uva"];
+        const palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
+        const letrasCorretas = new Set();
+
+        function mostrarPalavra() {
+            let resultado = "";
+            for (const letra of palavraSecreta) {
+                if (letrasCorretas.has(letra)) {
+                    resultado += letra;
+                } else {
+                    resultado += "_";
+                }
+            }
+            document.getElementById("palavra").textContent = resultado;
+        }
+
+        function verificarLetra() {
+            const letra = document.getElementById("letra").value.toLowerCase();
+            if (letra && !letrasCorretas.has(letra)) {
+                letrasCorretas.add(letra);
+                mostrarPalavra();
+                if (!palavraSecreta.includes(letra)) {
+                    document.getElementById("resultado").textContent = "Letra incorreta!";
+                }
+            }
+        }
+
+        mostrarPalavra();
+    </script>
+</body>
+</html>

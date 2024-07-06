@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IRRF</title>
+</head>
+<body>
+    <h1>Calculadora de Imposto de Renda</h1>
+    <label for="renda">Renda tributável:</label>
+    <input type="number" id="renda" step="0.01" required>
+    <br>
+    <label for="deducoes">Deduções:</label>
+    <input type="number" id="deducoes" step="0.01" required>
+    <br>
+    <button onclick="calcularImposto()">Calcular</button>
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
